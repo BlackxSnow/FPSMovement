@@ -1,0 +1,65 @@
+<size=36><b>Proposed</b></size>
+\t> Reduce wall jump velocity for shallow angles, or clamp jump direction
+\t> Tile texture on orange objects
+\t> Stop player wall running over the top of walls
+\t> Fix changelog scrolling
+\t> Add a gun and targets
+\t> Add wall mantling
+
+<size=36><b>Version 5.1</b></size>
+\t> Look based wall jump default to true
+\t> Crouch disabled while not grounded
+\t> Clamp look based wall jump azimuth between -90 degrees and -30 degrees
+\t> Added a 'gun' for testing purposes
+\t> Modified look altitude remap curve (steeper at low angles, neutral angles are remapped higher)
+
+<size=36><b>Version 5.0</b></size>
+\t> Reworked wall run
+\t> Removed "MaxWallRunTime"
+\t> Removed "WallRunMinSpeed"
+\t> Changed several default values
+\t> Added "WallJumpRetainY" boolean (Does WallJumpVelocityRetention include the y value)
+\t> Added "WallRunGravityModifier" float (How much does gravity apply during wall run)
+\t> Added "WallRunYVelocityBonus" float (How much of JumpForce is added on starting a run)
+\t> Changed default ground angle limit to 60
+\t> Added some geometry
+\t> Added Exit and Reset buttons to the Escape menu
+
+<size=36><b>Version 4.3</b></size>
+\t> Map view direction to jump altitude angle non-linearly (peak at approx. 15 degrees, 0 still reasonably high)
+\t> Increase aerial movement and capped at SprintSpeed in input direction (You can't accelerate with WASD past the limit)
+\t> Changed the grid texture size to be 1m^2, was incorrectly 2m^2
+\t> Fixed the Absolute wall jump (look jump off) being stronger than it should
+\t> AirSpeedMultiplier default raised 1 -> 2.5
+
+<size=36><b>Version 4.2</b></size>
+\t> Changed boolean input panel visuals to better reflect state
+\t> Fixed input being aligned to velocity on touching a wall rather than on wall run
+\t> Changed variable menu to a grouped, packed layout
+\t> Changed wall run check to use unprojected velocity (You can start wall runs even if you're against the wall already)
+\t> Disallowed wall running on the same wall at the same normal twice in a row (or without landing)
+\t> Readded look direction wall jump as an option
+\t> Changed look direction wall jump Y modifier: [-1,1] -> [-0.5,1]
+\t> Added tiled texture (1 tile = 1m^2)
+\t> Locked cursor to screen (finally)
+
+<size=36><b>Version 4.1</b></size>
+\t> Fixed boolean variable inputs not updating their target
+\t> Rebaked lighting
+\t> Added up to JumpForce as forward velocity when wall jumping
+\t> Fixed camera tilting on crouch by input rather than velocity
+\t> Fixed FrictionGainTime not applying to sliding
+
+<size=36><b>Version 4.0</b></size>
+\t> Added changelog :)
+\t> Changed jump direction from look vector to '(horizontalVelocity * WallJumpVelocityRetention) + (WallNormal + Vector3.up) * JumpForce * WallJumpModifier'
+\t> Added FrictionGainTime to variable menu (Time after landing from the air until full friction is reached to allow for some slide)
+\t> Added 'SpaceToStartWallRun' to variable menu (Does space need to be held at time of impact to begin a run)
+\t> Added 'AerialDragCoefficient' to variable menu (1-var multiplied by horizontal velocity per second)
+\t> Added 'IsInputOnWallVelocityAligned' to variable menu (Means A/D will always be with/against the wall normal, meaning you won't pop off the wall with W held)
+\t> Added 'CanSprintInAir' to variable menu
+
+<size=36><b>Version 3.0</b></size>
+\t> Introduced sliding on holding CTRL
+\t> Changed wall jump formula to give y velocity based on a remapped look elevation (you don't need to look straight up to get maximum y force)
+\t> Some other stuff I can't recall
